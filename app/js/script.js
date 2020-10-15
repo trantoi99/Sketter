@@ -1,12 +1,48 @@
 $(document).ready(function() {
     $('.slide').slick({
-        dots: false,
+        dots: true,
         arrows: false,
         infinite: true,
         speed: 300,
+        centerMode: true,
+        centerPadding: '0px',
         focusOnSelect: true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+    $('.slideshow').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        centerMode: true,
+        centerPadding: '105px',
+        focusOnSelect: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        nextArrow: '<a class="slide-arrow next-arrow"><i class="lni lni-chevron-right"></i></a>',
+        prevArrow: '<a class="slide-arrow prev-arrow"><i class="lni lni-chevron-left"></i></a>',
         responsive: [{
                 breakpoint: 992,
                 settings: {
@@ -29,6 +65,26 @@ $(document).ready(function() {
                 }
             }
         ]
+    });
+    $('.button').magnificPopup({
+        items: {
+            src: 'https://www.youtube.com/watch?v=4ZHp5KNXTPA'
+        },
+        type: 'iframe',
+        iframe: {
+            markup: '<div class="mfp-iframe-scaler">' +
+                '<div class="mfp-close"></div>' +
+                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                '</div>',
+            patterns: {
+                youtube: {
+                    index: 'youtube.com/',
+                    id: 'v=',
+                    src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+                }
+            },
+            srcAction: 'iframe_src',
+        }
     });
     const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
     accordionItemHeaders.forEach(accordionItemHeader => {
