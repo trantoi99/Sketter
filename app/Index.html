@@ -50,16 +50,62 @@
     <section class="nav__bar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <h2>
-                        Sketter
-                    </h2>
+                <div class="col-lg-9">
+                    <nav class="navbar navbar-expand-lg navbar-dark shadow-none">
+                        <a href="#">
+                            <h2>Sketter</h2>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu_CamW" aria-controls="navbarMenu_CamW" aria-expanded="false" aria-label="Toggle navigation">
+                            <span><i class="lni lni-menu"></i></span>
+                            </button>
+                        <div class="collapse navbar-collapse" id="navbarMenu_CamW">
+                            <ul class="navbar-nav mx-auto text-uppercase">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                           Home
+                                        </a>
+                                </li>
+                                <li class="nav-item nav__li--left">
+                                    <a class="nav-link" href="#">
+                                            Feature</a>
+                                </li>
+                                <li class="nav-item nav__li--left">
+                                    <a class="nav-link" href="#">
+                                            Testimonial</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-                <div class="col-lg-6">
-
-                </div>
                 <div class="col-lg-3">
-
+                    <div class="d-flex align-items-baseline">
+                        <div class="pr-2">
+                            <h5>
+                                FOLLOW US
+                            </h5>
+                        </div>
+                        <div class="icon-spacing pl-1">
+                            <div class="icon">
+                                <div class="social">
+                                    <a class="fa fa-facebook" aria-hidden="true" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon-spacing pl-1">
+                            <div class="icon">
+                                <div class="social">
+                                    <a class="fa fa-instagram" aria-hidden="true" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon-spacing">
+                            <div class="icon">
+                                <div class="social">
+                                    <a class="fa fa-linkedin" aria-hidden="true" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -411,11 +457,81 @@
                             </h6>
                         </div>
                     </div>
-                    <div class="price">
-
+                    <div class="product__title pt-2 pb-3">
+                        Name of product
+                    </div>
+                    <div class="product__price">
+                        <del>$100</del>
+                        <div class="product__price--sale pl-3">
+                            $75
+                        </div>
+                    </div>
+                    <div class="product__countdown padding-bottom-40">
+                        <div>
+                            <h3>
+                                Limited only
+                            </h3>
+                        </div>
+                        <div class="d-flex align-items-baseline padding-left-12">
+                            <i class="lni lni-alarm-clock pr-1" style="font-size: 16px; color: #ff0f00;"></i>
+                            <ul class="d-flex text-center">
+                                <li><span id="days"></span>D
+                                </li>
+                                <li><span id="hours"></span>H
+                                </li>
+                                <li> <span id="minutes"></span>M
+                                </li>
+                                <li><span id="seconds"></span>S
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product__description padding-bottom-40">
+                        <div class="d-flex align-items-baseline">
+                            <i class="lni lni-checkmark"></i>
+                            <p class="pl-2">
+                                Mauris tincidunt ante non tortor fermentum mollis.
+                            </p>
+                        </div>
+                        <div class="d-flex align-items-baseline">
+                            <i class="lni lni-checkmark"></i>
+                            <p class="pl-2">
+                                Aliquam ac diam cursus ipsum elementum tempus et eu justo.
+                            </p>
+                        </div>
+                        <div class="d-flex align-items-baseline">
+                            <i class="lni lni-checkmark "></i>
+                            <p class="pl-2">
+                                Quisque imperdiet mauris eget mauris.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product__color padding-bottom-32">
+                        <select class="form-control">
+                            <option>Choose color</option>
+                            <option>Yellow</option>
+                            <option>Black</option>
+                            <option>Red</option>
+                          </select>
+                    </div>
+                    <div class="product__buy padding-bottom-24">
+                        <div class="quantity__group pr-4">
+                            <button type="button" class="minus" onclick="decreaseValue()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                            <input id="theInput" type="number" class="input-text qty text" title="Qty" value="1" min="0" step="1">
+                            <button type="button" class="plus" onclick="increaseValue()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="margin-top-32">
+                            <a class="btn-yellow" href="#">Buy It Now</a>
+                        </div>
+                    </div>
+                    <div class="product__checkout">
+                        <h4 class="pr-2">
+                            Secure checkcout
+                        </h4>
+                        <img src="css/img/Paymentmethod.png" alt="payment method" class="img-fluid">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 order-col">
                     <div class="product__img--absolute">
                         <div class="circle__wrapper">
                             <div class="circle__inner">
@@ -646,11 +762,20 @@
     <section class="last">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-
+                <div class="col-md-6 text-auto">
+                    <div class="padding-bottom-40">
+                        <h2>
+                            Safe <span class="text-attention"> Off 30% </span> NOW
+                        </h2>
+                    </div>
+                    <div>
+                        <a href="#" class="btn-black">Buy It Now</a>
+                    </div>
                 </div>
-                <div class="col-md-6">
-
+                <div class="col-md-6 img-center order-col">
+                    <div class="img-absolute">
+                        <img src="css/img/ImgSkate.png" alt="Skate" class="img-fluid">
+                    </div>
                 </div>
             </div>
         </div>
