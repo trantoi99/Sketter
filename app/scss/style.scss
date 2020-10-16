@@ -955,6 +955,10 @@ header {
             max-width: 33.33%;
         }
     }
+    @media screen and (max-width:576px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 .faqs {

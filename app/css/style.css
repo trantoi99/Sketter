@@ -784,6 +784,10 @@ header {
     .gallery .col-md-3 .slick-slide {
       flex: 0 0 33.33%;
       max-width: 33.33%; } }
+  @media screen and (max-width: 576px) {
+    .gallery {
+      padding-top: 60px;
+      padding-bottom: 60px; } }
 
 .faqs {
   padding-top: 80px;
